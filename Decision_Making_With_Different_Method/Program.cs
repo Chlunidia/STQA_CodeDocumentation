@@ -4,54 +4,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// <summary>
-// Operasi untuk memasukkan nilai
-// </summary>
+/// <summary>
+/// Operasi untuk memasukkan nilai
+/// </summary>
 namespace Decision_Making_With_Different_Method
 {
-    // <summary>
-    // Operasi untuk memasukkan nilai.
-    // </summary>
-    // <remarks> Class InputData digunakan untuk menjalankan operasi untuk memasukkan data nim dan nilai.  </remarks>
-    // <param name="nilM"> Menerima input nilai Matematika. </param>
-    // <param name="nimB"> Menerima input nilai Bahasa Inggris. </param>
+    /// <summary>
+    /// Operasi untuk memasukkan nilai.
+    /// </summary>
+    /// <remarks> Class InputData digunakan untuk menjalankan operasi untuk memasukkan data nim dan nilai.  </remarks>
+    /// <param name="nilM"> Menerima input nilai Matematika. </param>
+    /// <param name="nimB"> Menerima input nilai Bahasa Inggris. </param>
     class InputData
     {
-        // <summary>
-        // <remarks> Funtion ini merupakan deklarasi dari semua variabel untuk memasukkan data yang diinput oleh user. </remarks>
-        // <param name="nilM"> Menerima input nilai Matematika. </param>
-        // <param name="nimB"> Menerima input nilai Bahasa Inggris. </param>
-        // <remarks> Double digunakan untuk menjumlahkan bilangan. </remarks>
-        // </summary>
+        /// <summary>
+        /// <remarks> Funtion ini merupakan deklarasi dari semua variabel untuk memasukkan data yang diinput oleh user. </remarks>
+        /// <param name="nilM"> Menerima input nilai Matematika. </param>
+        /// <param name="nimB"> Menerima input nilai Bahasa Inggris. </param>
+        /// <remarks> Double digunakan untuk menjumlahkan bilangan. </remarks>
+        /// </summary>
         public double nilM, nilB;
         public double InputNilaiM()
         {
-            // Display 'Masukkan Nilai Matematika = '
+            /// Display 'Masukkan Nilai Matematika = '
             Console.Write("Masukan nilai Matematika = ");
-            // Accept nilM
+            /// Accept nilM
             nilM = Convert.ToDouble(Console.ReadLine());
             return nilM;
         }
 
         public double InputNilaiB()
         {
-            // Display 'Masukkan Nilai Bahasa Inggris = '
+            /// Display 'Masukkan Nilai Bahasa Inggris = '
             Console.Write("Masukkan nilai Bahasa Inggris = ");
             nilB = Convert.ToDouble(Console.ReadLine());
             return nilB;
         }
     }
-    // <summary>
-    // Operasi untuk menentukan rerata nilai yang telah dimasukkan oleh user.
-    // </summary>
-    // <remarks> Class ProsesData membuat operasi untuk menentukan rerata. </remarks>
+    /// <summary>
+    /// Operasi untuk menentukan rerata nilai yang telah dimasukkan oleh user.
+    /// </summary>
+    /// <remarks> Class ProsesData membuat operasi untuk menentukan rerata. </remarks>
     class ProsesData
     {
-        // <summary>
-        // <remarks> Variabel rerata digunakan untuk mendeklarasikan rerata nilai yang telah dihitung. </remarks>
-        // </summary>
-        // <param name = "rerata"> Menyimpan data rerata nilai yang telah diinput oleh user. </param>
-        // <returns> Hasil dari perhitungan rerata nilai Matematika dan Bahasa Inggris. </returns>
+        /// <summary>
+        /// <remarks> Variabel rerata digunakan untuk mendeklarasikan rerata nilai yang telah dihitung. </remarks>
+        /// </summary>
+        /// <param name = "rerata"> Menyimpan data rerata nilai yang telah diinput oleh user. </param>
+        /// <returns> Hasil dari perhitungan rerata nilai Matematika dan Bahasa Inggris. </returns>
         public double rerata;
         public double Hitung(double nilM, double nilB)
         {
@@ -59,35 +59,35 @@ namespace Decision_Making_With_Different_Method
             return rerata;
         }
     }
-    // <summary>
-    // Operasi untuk menentukan status nilai.
-    // </summary>
-    // <remarks> Class OutputData membuat operasi untuk menentukan status. </remarks>
+    /// <summary>
+    /// Operasi untuk menentukan status nilai.
+    /// </summary>
+    /// <remarks> Class OutputData membuat operasi untuk menentukan status. </remarks>
     class OutputData
     {
-        // <summary>
-        // <remarks> Variabel status digunakan untuk mendeklarasikan status nilai yang telah direrata. </remarks>
-        // </summary>
+        /// <summary>
+        /// <remarks> Variabel status digunakan untuk mendeklarasikan status nilai yang telah direrata. </remarks>
+        /// </summary>
         public string status;
-        // <summary>
-        // Operasi untuk menentukan status nilai.
-        // </summary>
-        // <param name="rerata"> Menerima input nilai rerata yang sudah dihitung. </param>
-        // <param name="nilM"> Menerima input nilai Matematika. </param>
-        // <remarks> nFunction ini berfungsi untuk menentukan hasil rerata nilai yang telah dimasukkan user berstatus lulus atau gagal. </remarks>
+        /// <summary>
+        /// Operasi untuk menentukan status nilai.
+        /// </summary>
+        /// <param name="rerata"> Menerima input nilai rerata yang sudah dihitung. </param>
+        /// <param name="nilM"> Menerima input nilai Matematika. </param>
+        /// <remarks> nFunction ini berfungsi untuk menentukan hasil rerata nilai yang telah dimasukkan user berstatus lulus atau gagal. </remarks>
         public void Hasil(double rerata, double nilM)
         {
-            // if (rerata >= 60 AND nilM >= 70)
+            /// if (rerata >= 60 AND nilM >= 70)
             if (rerata >= 60 & nilM >= 70)
-            { // Begin
-                // Status = 'lulus'
+            { /// Begin
+                /// Status = 'lulus'
                 Console.WriteLine("Lulus");
-            } // End
+            } /// End
             else
-            { // Begin
-                // Status = 'Gagal'
+            { /// Begin
+                /// Status = 'Gagal'
                 Console.WriteLine("Gagal");
-            } // End
+            } /// End
         }
 
         public void Status(string status)
@@ -96,26 +96,26 @@ namespace Decision_Making_With_Different_Method
         }
     }
 
-    // <summary>
-    // Main class
-    // </summary>
+    /// <summary>
+    /// Main class
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            // initiate Class
+            /// initiate Class
             InputData id = new InputData();
             ProsesData pd = new ProsesData();
             OutputData od = new OutputData();
 
-            // panggil method untuk input data
+            /// panggil method untuk input data
             id.InputNilaiM();
             id.InputNilaiB();
 
-            // panggil method untuk proses data
+            /// panggil method untuk proses data
             pd.Hitung(id.nilM, id.nilB);
 
-            // panggil method untuk output  data
+            /// panggil method untuk output  data
             od.Status(od.status);
             od.Hasil(pd.rerata, id.nilM);
 
